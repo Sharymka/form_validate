@@ -1,0 +1,53 @@
+
+@mixin flex($justify-content, $flex-direction, $align-items, $gap) {
+    display: flex;
+    justify-content: $justify-content;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    gap:$gap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.form {
+    margin: 30px;
+    padding: 20px;
+    @include flex(start, column, start, 10px);
+    border: 5px solid #6e6565;
+    width: 25%;
+}
+input {
+    margin-top: 5px;
+    margin-bottom: 3px;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+label {
+    margin-bottom: 3px;
+}
+button {
+    padding: 10px;
+    background-color: rgb(66, 66, 66);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+}
+
+.error_msg {
+  color: rgb(245, 106, 106);
+}
+
+.invalid {
+    outline: 2px solid rgb(245, 106, 106);
+    border: 2px solid rgb(245, 106, 106);
+}
+
+.valid {
+    outline: 2px solid rgb(76, 140, 45);
+    border: none;
+}
